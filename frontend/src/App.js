@@ -6,6 +6,7 @@ import LoginForm from './components/LoginForm'
 import NewBook from './components/NewBook'
 import Recommended from './components/Recommended'
 import { ALL_BOOKS, BOOK_ADDED, GET_USER } from './queries'
+import './dist/output.css'
 
 const App = () => {
   const [page, setPage] = useState('authors')
@@ -52,7 +53,6 @@ const App = () => {
   }
 
   useEffect(() => {
-    console.log('app effect');
     setterUser();
     if(!token) {
       setToken(localStorage.getItem('user-token'));
