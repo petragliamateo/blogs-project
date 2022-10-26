@@ -32,8 +32,8 @@ const Books = ({ show }) => {
   });
 
   return (
-    <div>
-      <h2>books</h2>
+    <div className="page-container">
+      <h2>Books</h2>
       <table>
         <tbody>
           <tr>

@@ -23,23 +23,43 @@ const SetYearOfAuthor = ({ authors }) => {
     setAuthor('')
     setYear('')
   }
+  const selectStyle = {
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? '#4C0033' : 'black',
+      color: state.isSelected ? 'red' : 'blue',
+    }),
+    control: (p) => ({
+      ...p,
+      backgroundColor: '#4C0033',
+      borderColor: '#AF0171',
+    }),
+    placeholder: (p) => ({
+      ...p,
+      color: '#AF0171',
+    }),
+    singleValue: (p) => ({
+      ...p,
+      color: '#AF0171',
+    }),
+  }
 
   return (
     <div>
       <h2>Set birthyear</h2>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} className='page-container'>
         <Select
+          styles={selectStyle}
           options={options}
           onChange={setAuthor}
         />
-        <div>
-          born
-          <input
-            type="number"
-            value={year}
-            onChange={({ target }) => setYear(target.value)}
-          />
-        </div>
+        <input
+          className='dark-input'
+          placeholder='Born..'
+          type="number"
+          value={year}
+          onChange={({ target }) => setYear(target.value)}
+        />
         <button type="submit">update author</button>
       </form>
     </div>

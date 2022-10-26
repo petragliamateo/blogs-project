@@ -36,21 +36,20 @@ const LoginForm = ({ setToken, show, setPage, getUser }) => {
 
   return (
     <div>
-      <form onSubmit={submit}>
-        <div>
-          username
-          <input
-            value={username}
-            onChange={({ target }) => setUsername(target.value)}
-          />
-        </div>
-        <div>
-          password
-          <input
-            value={password}
-            onChange={({ target }) => setPassword(target.value)}
-          />
-        </div>
+      <form onSubmit={submit} className="page-container">
+        <h3>username</h3>
+        <input
+          className='dark-input'
+          value={username}
+          onChange={({ target }) => setUsername(target.value)}
+        />
+        <h3>password</h3>
+        <input
+          className='dark-input'
+          type="password"
+          value={password}
+          onChange={({ target }) => setPassword(target.value)}
+        />
         <button type="submit">Login</button>
       </form>
       {error}

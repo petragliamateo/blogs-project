@@ -60,8 +60,8 @@ const App = () => {
   }, [result.data])
 
   return (
-    <div>
-      <div>
+    <div className='mx-32'>
+      <div className='flex justify-center gap-8'>
         <button onClick={() => setPage('authors')}>authors</button>
         <button onClick={() => setPage('books')}>books</button>
         {token ? (

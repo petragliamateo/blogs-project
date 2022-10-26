@@ -21,9 +21,9 @@ const Recommended = ({ show, favoriteGenre }) => {
   }
 
   return (
-    <div>
-      <h2>recommendations</h2>
-      <p>books in your favorite genre <strong>{favoriteGenre}</strong></p>
+    <div className="page-container">
+      <h2>Recommendations</h2>
+      <p>Books in your favorite genre <strong>{favoriteGenre}</strong></p>
       <table>
         <tbody>
           <tr>

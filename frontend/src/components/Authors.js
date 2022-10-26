@@ -10,9 +10,9 @@ const Authors = (props) => {
   const authors = result.loading ? [] : result.data.allAuthors;
 
   return (
-    <div>
-      <h2>authors</h2>
-      <table>
+    <div className='page-container'>
+      <h2>Authors</h2>
+      <table className=''>
         <tbody>
           <tr>
             <th></th>

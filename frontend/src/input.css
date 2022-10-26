@@ -9,8 +9,27 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-repeat: no-repeat;
+  @apply bg-dark-0 text-dark-3;
 }
 
 button {
-  @apply py-4 px-8 font-bold shadow-xl border bg-black text-blue-600 hover:border-blue-300;
+  @apply py-4 px-8 font-bold shadow-xl border bg-black text-dark-3 border-dark-0 hover:border-dark-2;
+}
+tr, th {
+  @apply hover:bg-slate-300 text-start hover:text-black;
+}
+tbody > :nth-child(2n) {
+  @apply bg-dark-1 hover:bg-slate-200 hover:text-black;
+}
+
+.page-container {
+  @apply flex flex-col gap-5 my-8;
+}.page-container h2 {
+  @apply text-3xl font-semibold;
+}.page-container h3 {
+  @apply text-xl font-semibold text-center;
+}
+
+.dark-input {
+  @apply bg-dark-0 border-dark-2 border rounded w-full text-dark-3 placeholder:text-dark-3;
 }
